@@ -1,17 +1,29 @@
 package com.memory;
 
+import com.memory.commands.BPOpenMenu;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class main extends JavaPlugin implements Listener {
+    private BattlePass battlePass;
+
     @Override
     public void onEnable() {
+        this.battlePass = BPLoader.loadFromFile();
+        this.getCommand("battlepass").setExecutor(new BPOpenMenu(battlePass));
         Bukkit.getPluginManager().registerEvents(this, this);
-        for (Player player : getServer().getOnlinePlayers()){ //подчёркивает getPlugin
+        getLogger().info("Battle Pass Plugin has been enabled!");
+        for (Player player : getServer().getOnlinePlayers()){
             player.sendMessage(ChatColor.AQUA + "Версия плагина: " + getDescription().getVersion());
         }
+    }
+    @EventHandler
+    void onPlayerJoin(PlayerJoinEvent e){
+        e.getPlayer().sendMessage(ChatColor.AQUA + "Версия плагина: " + getDescription().getVersion());
     }
 }

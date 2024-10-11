@@ -11,7 +11,7 @@ battlepass:
       reward:
         type: "xp"
         name: "xp"
-        amount: 100
+        amount: 1
     3:
       experience_required: 300
       reward:

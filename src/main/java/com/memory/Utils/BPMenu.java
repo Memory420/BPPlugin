@@ -7,10 +7,11 @@ import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
-public class BPMenu {
+public class BPMenu implements Listener {
 
     public static Inventory generateBPMenu(Player player, int listNum, BattlePass bp) {
         Inventory inventory = Bukkit.createInventory(player, 27, ChatColor.GOLD + "Баттл Пасс");
