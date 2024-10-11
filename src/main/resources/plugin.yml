@@ -1,0 +1,12 @@
+name: BattlePassPlugin
+version: 0.0.1
+main: com.memory.MyBattlePass
+author: Scotium
+description: "Battle Pass plugin for Minecraft."
+
+commands:
+  battlepass:
+    description: Открыть меню Battle Pass
+    usage: /battlepass
+    aliases: [bp]
+    permission: battlepass.use

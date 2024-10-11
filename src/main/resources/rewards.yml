@@ -1,0 +1,20 @@
+battlepass:
+  levels:
+    1:
+      experience_required: 100
+      reward:
+        type: "item"
+        name: "APPLE"
+        amount: 1
+    2:
+      experience_required: 200
+      reward:
+        type: "xp"
+        name: "xp"
+        amount: 100
+    3:
+      experience_required: 300
+      reward:
+        type: "item"
+        name: "DIAMOND"
+        amount: 2
