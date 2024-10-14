@@ -1,5 +1,8 @@
-package com.memory;
+package com.memory.Utils;
 
+import com.memory.BattlePass;
+import com.memory.Level;
+import com.memory.Reward;
 import org.yaml.snakeyaml.Yaml;
 
 import java.io.InputStream;

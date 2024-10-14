@@ -1,6 +1,6 @@
 name: BattlePassPlugin
-version: 0.0.12
-main: com.memory.main
+version: 0.0.26
+main: com.memory.Main
 author: Scotium
 description: "Battle Pass plugin for Minecraft."
 
